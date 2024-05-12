@@ -61,12 +61,21 @@ async clickLoginRegisterButton() {
  await this.page.getByRole('button', { name: 'Register', exact: true }).click();
   }
 
-  async assertSuccessMessage() {
+//register successfully. navaigatge login  
+async assertSuccessMessage() {
     // Assert that the success message is displayed
   await this.page.waitForSelector('#success-message');
   }
 
-  async assertValidationErrors() {
+  
+//here too many wrong cases:
+//email:
+//empty, invaild(not meet email format),already exist
+//password:
+//empty, invaild(not meet regular expression)
+//firstname,last name
+//empty, already exist, invaild
+async assertValidationErrors() {
     // Assert that validation error messages are displayed
   await this.page.waitForSelector('#firstname-error');
   }
