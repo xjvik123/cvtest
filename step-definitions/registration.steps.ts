@@ -6,7 +6,7 @@ const registrationPage = new RegistrationPage(page);
 const registrationData = readYamlFile('data/registration.data.yaml');
 
 Given('I navigate to the URL {string}', async (url: string) => {
-  await registrationPage.navigateToUrl(url);
+  await registrationPage.navigateToUrl(https://test.cv.ee/);
 });
 
 When('I click on the {string} button', async (buttonText: string) => {
