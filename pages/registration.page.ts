@@ -16,55 +16,46 @@ export class RegistrationPage {
 
   async clickLoginRegisterButton() {
     // Click on the "Login | Register" button
-    // Use browser's inspector to find the DOM path
-    // Example: await this.page.click('#login-register-btn');
+  await this.page.click('text=login-register');
   }
 
   async switchToRegistrationTab() {
     // Switch to the registration tab
-    // Use browser's inspector to find the DOM path
-    // Example: await this.page.click('#registration-tab');
+  await this.page.click('text=Register');
   }
 
   async clickRegisterAsJobSeeker() {
     // Click on the "Register As" -> "For Job Seekers" button
-    // Use browser's inspector to find the DOM path
-    // Example: await this.page.click('#register-as-job-seeker');
+  await this.page.click('text= For Job Seekers');
   }
 
   async clickRegisterWithEmail() {
     // Click on the "Register with email" button
-    // Use browser's inspector to find the DOM path
-    // Example: await this.page.click('#register-with-email');
+  await this.page.click('text= Register with email');
   }
 
   async enterValidRegistrationData() {
     // Enter valid registration data
-    // Use browser's inspector to find the DOM paths for input fields
-    // Example: await this.page.fill('#firstname', this.registrationData.validData.firstName);
+  await this.page.fill('#firstname', this.registrationData.validData.firstName);
   }
 
   async enterInvalidRegistrationData() {
     // Enter invalid registration data
-    // Use browser's inspector to find the DOM paths for input fields
-    // Example: await this.page.fill('#firstname', this.registrationData.invalidData.firstName);
+  await this.page.fill('#firstname', this.registrationData.invalidData.firstName);
   }
 
   async clickRegisterButton() {
     // Click on the "Register" button
-    // Use browser's inspector to find the DOM path
-    // Example: await this.page.click('#register-btn');
+  await this.page.click('#register-btn');
   }
 
   async assertSuccessMessage() {
     // Assert that the success message is displayed
-    // Use browser's inspector to find the DOM path for the success message
-    // Example: await this.page.waitForSelector('#success-message');
+  await this.page.waitForSelector('#success-message');
   }
 
   async assertValidationErrors() {
     // Assert that validation error messages are displayed
-    // Use browser's inspector to find the DOM paths for error messages
-    // Example: await this.page.waitForSelector('#firstname-error');
+  await this.page.waitForSelector('#firstname-error');
   }
 }
