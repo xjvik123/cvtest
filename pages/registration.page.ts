@@ -14,27 +14,36 @@ export class RegistrationPage {
     await this.page.goto(https://test.cv.ee/);
   }
 
-  async clickLoginRegisterButton() {
+async selectlanguage() {
+    // Click on the "select language" button
+ await this.page.getByLabel('Select language').click();   
+ await this.page.getByRole('button', { name: 'Inglise' }).click();
+  }
+async clickLoginRegisterButton() {
     // Click on the "Login | Register" button
-  await this.page.click('text=login-register');
+  await this.page.getByRole('button', { name: 'Login | Register' }).click();
   }
 
   async switchToRegistrationTab() {
     // Switch to the registration tab
-  await this.page.click('text=Register');
+ await this.page.getByRole('button', { name: 'Registration' }).click();
   }
 
   async clickRegisterAsJobSeeker() {
     // Click on the "Register As" -> "For Job Seekers" button
-  await this.page.click('text= For Job Seekers');
+   await this.age.getByRole('button', { name: 'For job seekers' }).click();
   }
 
   async clickRegisterWithEmail() {
     // Click on the "Register with email" button
-  await this.page.click('text= Register with email');
+  await this.page.getByRole('button', { name: 'Register with email' }).click();
   }
 
-  async enterValidRegistrationData() {
+ await page.locator('label').filter({ hasText: 'I want to receive CV-Online' }).locator('span').first().click();
+  await page.locator('label').filter({ hasText: 'I agree to the Terms of use' }).click();
+  await page.locator('label').filter({ hasText: 'I agree that my information' }).locator('span').first().click();
+
+ async enterValidRegistrationData() {
     // Enter valid registration data
   await this.page.fill('#firstname', this.registrationData.validData.firstName);
   }
@@ -44,9 +53,12 @@ export class RegistrationPage {
   await this.page.fill('#firstname', this.registrationData.invalidData.firstName);
   }
 
+
+
+
   async clickRegisterButton() {
     // Click on the "Register" button
-  await this.page.click('#register-btn');
+ await this.page.getByRole('button', { name: 'Register', exact: true }).click();
   }
 
   async assertSuccessMessage() {
