@@ -44,3 +44,9 @@ In the step-definitions/registration.steps.ts file, we import the RegistrationPa
 The step definitions are written to match the Gherkin scenarios in the features/registration.feature file. Each step definition calls the corresponding method from the RegistrationPage class.
 In the utils/common.utils.ts file, the readYamlFile function reads the contents of a YAML file and parses it using the js-yaml library. This function is used to load the test data from the registration.data.yaml file.
 The data/registration.data.yaml file contains the test data for valid and invalid registration scenarios. You can modify the values in this file as needed for your test cases.
+
+
+Run tests
+      
+        npm run test
+        npm run allure:report
