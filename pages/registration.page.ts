@@ -11,7 +11,7 @@ export class RegistrationPage {
   }
 
   async navigateToUrl(url: string) {
-    await this.page.goto(url);
+    await this.page.goto(https://test.cv.ee/);
   }
 
   async clickLoginRegisterButton() {
