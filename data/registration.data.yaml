@@ -3,11 +3,11 @@ validData:
   lastName: Doe
   email: john.doe@example.com
   password: Str0ngP@ssw0rd
-  confirmPassword: Str0ngP@ssw0rd
+ 
 
 invalidData:
   firstName: ''
   lastName: ''
   email: invalidemail
   password: short
-  confirmPassword: mismatch
+
